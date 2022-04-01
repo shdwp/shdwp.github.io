@@ -1,7 +1,7 @@
 The author of this plugin is from Ukraine. 
 On 24 Feb Russia has launched a full-scale war on Ukraine. Ukraine has been on track towards a better future, but Moscow just can't take that, drawing us back into authoritarianism and corruption. 
 They are now threatening the world with nuclear war if more countries join NATO, an alliance that was made explicitly to defend from Moscow threats.
-Please support Ukraine. Please ask your local governments to support Ukraine. Please do something, because otherwise, we will not have a country we can call our own anymore.
+Please support Ukraine.
 Oh, and plugin is looking for maintainers, for obvious reasons.
 More information:
 |https://shdwp.github.io/ukraine/
