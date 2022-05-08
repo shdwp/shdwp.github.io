@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://shdwp.github.io/about/sitemap.xml
