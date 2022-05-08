@@ -110,7 +110,7 @@
         <tr>
             <td>Short: </td>
             <td>
-<p>Multiplayer tactical game</p>
+<p>Tactical game</p>
 </td>
         </tr>
         
@@ -148,7 +148,7 @@
 <p>Challenges on the project:</p>
 <ul>
   <li>Legacy code had to be systematically phased out, I retained what I could, but there were major rewrites since gameplay become tenfold more complex</li>
-  <li>Lots of mechanics revolved around vision, which had to be symetric from any perspective since it’s a PvP game, and also changed dynamically based on the situation. I had to review a number of cell vision algorithms until I’ve found one that suited our needs</li>
+  <li>Lots of mechanics revolved around vision, which had to be symetric from any player perspective, and also changed dynamically based on the situation. I had to review a number of cell vision algorithms until I’ve found one that suited our needs</li>
   <li>Rendering and code optimizations - pathfinding, for example, made a big amount of unnecessary calculations, which I reduced and optimized. On the rendering side overlays were made really inefficient, so I rewrote the code to be rendered with custom shader and texture maps, which provided necessary efficiency</li>
   <li>WebGL brought its own share of problems, mainly with optimization and custom rendering. I’ve introduced some post FX in the project, but it took some trial and error to get that working under webgl</li>
   <li>Generally speaking it was a challenging game from the gameplay perspective - there were abilities to move through walls, become invisible, blow up holes in walls, build new walls, involuntarily move enemy units, set up invisible traps and devices, buffs, debuffs, critical hits and misses</li>
