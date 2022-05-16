@@ -2,9 +2,11 @@
 <html lang="en">
 
   <!-- Head -->
-  <head>        
+  <head>
     <!-- Metadata, OpenGraph and Schema.org -->
     
+
+
 
     <!-- Standard metadata -->
     <meta charset="utf-8">
@@ -28,8 +30,14 @@
     <link rel="stylesheet" href="https://gitcdn.link/repo/jwarby/jekyll-pygments-themes/master/monokai.css" />
 
     <!-- Styles -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔥</text></svg>">
     <link rel="stylesheet" href="/about/assets/css/main.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/about/assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/about/assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/about/assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/about/assets/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/about/assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
     <link rel="canonical" href="https://shdwp.github.io/about/projects/">
 
     <!-- Dark Mode -->
@@ -65,19 +73,20 @@
               
 
               <!-- Other pages -->
+              <li class="nav-item ">
+                  
+
+                  <a class="nav-link" href="/about/resume/">résumé</a>
+              </li>
               <li class="nav-item active">
-                <a class="nav-link" href="/about/projects/">projects<span class="sr-only">(current)</span></a>
+                  
+
+                  <a class="nav-link" href="/about/projects/">projects<span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item ">
-                <a class="nav-link" href="/about/none">resume</a>
-              </li>
-              <li class="nav-item dropdown ">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">miscellaneous</a>
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="/about/publications/">publication</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="/about/projects/">projects</a>
-                </div>
+                  
+
+                  <a class="nav-link" href="https://shdwp.github.io/ukraine/">🇺🇦 ukraine</a>
               </li>
 
               <!-- Toogle theme mode -->
@@ -92,16 +101,18 @@
         </div>
       </nav>
     </header>
+
     <br>
 
     <!-- Content -->
     <div class="container mt-5">
       <!-- page.html -->
         <div class="post">
-
+                <!--
           <header class="post-header">
             <h1 class="post-title">projects</h1>
           </header>
+                -->
 
           <article>
             <!-- pages/projects.md -->
@@ -116,10 +127,26 @@
             <img class="card-background" src="/about/assets/img/projects/2022/bcpoc_1.png">
           <div class="card-body">
             <h2 class="card-title">Blockchain learning project</h2>
-            <p class="card-text">Simple blockchain wallet that I've made as a learning project to learn Go and Rust.</p>
+            <p class="card-text">Blockchain wallet that I've made as a learning project in Go and Rust.</p>
             <div class="row ml-1 mr-1 p-0">
 
               <i class="card-tagline">Go, Rust, Blockchain</i>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <!-- _includes/projects.html -->
+    <div class="grid-item">
+      <a href="/about/projects/2022/fanfrt/">
+        <div class="card hoverable">
+            <img class="card-background" src="/about/assets/img/projects/2022/ffr_2.png">
+          <div class="card-body">
+            <h2 class="card-title">Idle Town Builder</h2>
+            <p class="card-text">Mobile idle town builder with pixelated art-style.</p>
+            <div class="row ml-1 mr-1 p-0">
+
+              <i class="card-tagline">NDA, Unity, mobile</i>
             </div>
           </div>
         </div>
@@ -136,6 +163,38 @@
             <div class="row ml-1 mr-1 p-0">
 
               <i class="card-tagline">Reverse-engineering, modding</i>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <!-- _includes/projects.html -->
+    <div class="grid-item">
+      <a href="/about/projects/2021/bstory/">
+        <div class="card hoverable">
+            <img class="card-background" src="/about/assets/img/projects/2021/bs_1.png">
+          <div class="card-body">
+            <h2 class="card-title">Turn-based strategy</h2>
+            <p class="card-text">Playtesting prototype of a turn-based strategy game.</p>
+            <div class="row ml-1 mr-1 p-0">
+
+              <i class="card-tagline">NDA, Unity, desktop</i>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <!-- _includes/projects.html -->
+    <div class="grid-item">
+      <a href="/about/projects/2021/btactics/">
+        <div class="card hoverable">
+            <img class="card-background" src="/about/assets/img/projects/2021/bt_1.png">
+          <div class="card-body">
+            <h2 class="card-title">Turn-based RPG</h2>
+            <p class="card-text">Playtesting prototype of a highly dynamic turn-based RPG.</p>
+            <div class="row ml-1 mr-1 p-0">
+
+              <i class="card-tagline">NDA, Unity, desktop</i>
             </div>
           </div>
         </div>
@@ -323,7 +382,7 @@
             <p class="card-text">Rhythm game built with Java/Slick2D.</p>
             <div class="row ml-1 mr-1 p-0">
 
-              <i class="card-tagline"></i>
+              <i class="card-tagline">Slick2D, Java</i>
             </div>
           </div>
         </div>
@@ -339,7 +398,7 @@
             <p class="card-text">Nvidia Shield streaming client project that I've heavily contributed to.</p>
             <div class="row ml-1 mr-1 p-0">
 
-              <i class="card-tagline"></i>
+              <i class="card-tagline">PS Vita, C</i>
             </div>
           </div>
         </div>
@@ -354,7 +413,7 @@
             <p class="card-text">Client for a popular weather forecast site.</p>
             <div class="row ml-1 mr-1 p-0">
 
-              <i class="card-tagline"></i>
+              <i class="card-tagline">iOS, Objective-C</i>
             </div>
           </div>
         </div>
@@ -369,7 +428,7 @@
             <p class="card-text">HUD for codemasters racing games on your smartphone.</p>
             <div class="row ml-1 mr-1 p-0">
 
-              <i class="card-tagline"></i>
+              <i class="card-tagline">iOS, Swift</i>
             </div>
           </div>
         </div>
@@ -385,7 +444,7 @@
             <p class="card-text">Playstation vita plugin that lets you remap buttons in games.</p>
             <div class="row ml-1 mr-1 p-0">
 
-              <i class="card-tagline"></i>
+              <i class="card-tagline">C, PS Vita, Homebrew</i>
             </div>
           </div>
         </div>
@@ -401,7 +460,7 @@
             <p class="card-text">Application to read manga\comics from any website on the web.</p>
             <div class="row ml-1 mr-1 p-0">
 
-              <i class="card-tagline"></i>
+              <i class="card-tagline">iOS, Swift</i>
             </div>
           </div>
         </div>
@@ -420,7 +479,22 @@
             <p class="card-text">Roguelike project made in Clojure.</p>
             <div class="row ml-1 mr-1 p-0">
 
-              <i class="card-tagline"></i>
+              <i class="card-tagline">Clojure, Procedural Generation</i>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <!-- _includes/projects.html -->
+    <div class="grid-item">
+      <a href="https://github.com/shdwp/celty" target="_blank" rel="noopener noreferrer">
+        <div class="card hoverable">
+          <div class="card-body">
+            <h2 class="card-title">celty</h2>
+            <p class="card-text">Minimalistic server administration web utility.</p>
+            <div class="row ml-1 mr-1 p-0">
+
+              <i class="card-tagline">Python, Web Fullstack</i>
             </div>
           </div>
         </div>
@@ -436,7 +510,7 @@
             <p class="card-text">Minecraft server with set of custom plugins.</p>
             <div class="row ml-1 mr-1 p-0">
 
-              <i class="card-tagline"></i>
+              <i class="card-tagline">Java, Python, Linux</i>
             </div>
           </div>
         </div>
@@ -452,7 +526,7 @@
             <p class="card-text">Mobile game (J2ME) heavily inspired by cult classic Stalker.</p>
             <div class="row ml-1 mr-1 p-0">
 
-              <i class="card-tagline"></i>
+              <i class="card-tagline">J2ME, Java</i>
             </div>
           </div>
         </div>
@@ -463,7 +537,6 @@
 </div>
 
           </article>
-
         </div>
 
     </div>
