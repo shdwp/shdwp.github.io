@@ -115,11 +115,11 @@
                 -->
 
           <article>
-            <p>It should be started with the fact that Final Fantasy doesn’t have an official plugin system like WoW does. But thanks to some members of the community there is an API and injector, all of which rely on community reverse-engineering efforts. Those are made in two areas: network packet interception &amp; decoding and static + dynamic assembly analysis.</p>
+            <p>It should be started with the fact that Final Fantasy doesn’t have an official plugin system as WoW does. But thanks to some members of the community there is an API and injector, all of which rely on community reverse-engineering efforts. Those are made in two areas: network packet interception &amp; decoding and static + dynamic assembly analysis.</p>
 
-<p>Developing plugins for said system is not easy, and while you can avoid reverse-engineering if you stick to already discovered API, it’s still pretty tricky since it involves a lot of function hooking. Game was made in C/C++ so it’s all x86_64. Plugins themselves are made with C#, which is ran in injected Mono instance.</p>
+<p>Developing plugins for the said system is not easy, and while you can avoid reverse-engineering if you stick to an already discovered API, it’s still pretty tricky since it involves a lot of function hooking. The game was made in C/C++ so it’s all x86_64. Plugins themselves are made with C#, which run in injected Mono instance.</p>
 
-<p>During the span of late 2021 - early 2022 I have created three plugins for said community plugin system:</p>
+<p>During the span of late 2021 to early 2022 I have created three plugins for said community plugin system:</p>
 
 <h3 id="faderplugin">FaderPlugin</h3>
 <div class="disclaimer project-cutout">
@@ -162,10 +162,10 @@
     </table>
 </div>
 
-<p>Plugin hijacks into in-game HUD system to control the visibility of the elements based on in-game conditions, for example hiding elements of the interface when you’re out of combat.
-Interface API was already reverse-engineered at that point so I only had to make use of it, albeit it still took changing the approach to “hiding” a number times until it was stable and was working for all of the elements.</p>
+<p>Plugin hijacks into the in-game HUD system to control the visibility of the elements based on in-game conditions, for example hiding elements of the interface when you’re out of combat.
+Interface API was already reverse-engineered at that point so I only had to make use of it, albeit it still took changing the approach to “hiding” several times until it was stable and was working for all of the elements.</p>
 
-<p>Configuration is done in a matrix arrangement, which was very usable at the beginning when there weren’t many conditions, but now UI is due to rework since said matrix now occupies a better half of the screen. I actually received a number of UI sketches from users of the plugin and will implement one of those ideas eventually.</p>
+<p>Configuration is done in a matrix arrangement, which was very usable at the beginning when there weren’t many conditions, but now UI is due to rework since said matrix now occupies a better half of the screen. I received several UI sketches from users of the plugin and will implement one of those ideas eventually.</p>
 
 <figure>
 
@@ -221,12 +221,12 @@ Interface API was already reverse-engineered at that point so I only had to make
     </table>
 </div>
 
-<p>Instead of showing character names, plugin can show their class icons or raid positions (in XIV players usually have positions assigned to them for easier communication).
-In addition to that, plugin actually listens to the chat to figure out which position is taken by which player automatically.</p>
+<p>Instead of showing character names, the plugin can show their class icons or raid positions (in XIV players usually have positions assigned to them for easier communication).
+In addition to that, the plugin listens to the game chat to figure out which position is taken by which player automatically.</p>
 
-<p>Plugin hijacks a number of things: character nameplates (I’ve found a hook signature in another plugin, but still had to decipher some of the structs in memory), messages in chat (to add the role prefix to character messages) and player character context menus (later two had an API fortunately).</p>
+<p>Plugin hijacks several things: character nameplates (I’ve found a hook signature in another plugin, but still had to decipher some of the structs in memory), messages in chat (to add the role prefix to character messages), and player character context menus (later two had an API fortunately).</p>
 
-<p>Initially there were only three presets for nameplates, but that number grew considerably with suggestions from the users.</p>
+<p>Initially, there were only three presets for nameplates, but that number grew considerably with suggestions from the users.</p>
 
 <figure>
 
@@ -301,12 +301,12 @@ In addition to that, plugin actually listens to the chat to figure out which pos
     </table>
 </div>
 
-<p>Plugin displays a widget with relevant party member cooldowns, allowing you to align your actions to fall under buffs, or quickly tell if you’re supposed to make required action, because everyone else have that action on cooldown.</p>
+<p>The plugin displays a widget with relevant party member cooldowns, allowing you to align your actions to fall under buffs, or quickly tell if you’re supposed to take the required action, because everyone else has that action on cooldown.</p>
 
-<p>For this one plugin intercepts network messages, contents of which I had to decipher (so I can figure out which packet is action invocation, whom it belongs to and which action it is).
-While the previous two plugins were rather light on the architectural side of thing, this one is done more properly, using Ninject for it’s DI (which I had to hook up with game’s own DI system).</p>
+<p>To accomplish it, plugin intercepts network messages, contents of which I had to decipher (so I can figure out which packet is action invocation, whom it belongs to, and which action it is).
+While the previous two plugins were rather light on the architectural side of things, this one is done more properly, using Ninject for it’s DI (which I had to hook up with the game’s own DI system).</p>
 
-<p>During the development I worked with a experienced raider to figure out which actions people would be interested in tracking, with list growing from initial 16 to staggering 48.</p>
+<p>During the development, I worked with an experienced raider to figure out which actions people would be interested in tracking, with the list growing from an initial 16 to a staggering 48.</p>
 
 <figure>
 
@@ -333,6 +333,7 @@ While the previous two plugins were rather light on the architectural side of th
   </picture>
 
 </figure>
+
 
           </article>
         </div>
