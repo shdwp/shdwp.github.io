@@ -2,6 +2,5 @@ The author of this plugin is from Ukraine.
 On 24 Feb Russia launched a full-scale war on Ukraine to forcefully bring the country back into its sphere of influence. While the forces retreated from the north, now an attack on the east is pending.
 Liberated territories have seen the true means of russian "denazification" - mass graves, streets littered with bodies, and basements filled with dead people with tied arms. All civilians, of course.
 Please support Ukraine. Ask your local government to support Ukraine. Because if we lose we will be heading towards the most brutal ethnic cleansing the world has seen in a while.
-Oh, and plugin is looking for maintainers, for obvious reasons.
 More information:
 |https://shdwp.github.io/ukraine/
