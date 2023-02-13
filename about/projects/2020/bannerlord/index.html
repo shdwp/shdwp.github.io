@@ -166,19 +166,19 @@
 </div>
 
 <p>When Mount &amp; Blade 2: Bannerlord was released I jumped on its modding scene since they have incorporated Mono and C# in their game, and I was interested in that at the time. 
-Bannerlord has a mod loader, which injects dlls into game’s Mono instance. While it’s a first party mod support, their API documentation was almost non existent at launch, therefore if you wanted to do something you had to reverse-engineer C#. Thankfully code is not obfuscated in any way, so you can fire up a disassembler and figure out APIs by yourself.</p>
+Bannerlord has a mod loader, which injects dlls into game's Mono instance. While it's a first party mod support, their API documentation was almost non existent at launch, therefore if you wanted to do something you had to reverse-engineer C#. Thankfully code is not obfuscated in any way, so you can fire up a disassembler and figure out APIs by yourself.</p>
 
 <p>Game UI screens are loaded from XML template files, with accompanying <em>view model</em> classes to populate them with the data. Mods could replace the XML file in question and overload its view model, but if there are multiples of mods that want to change the same elements of the interface they will simply overwrite each others changes.</p>
 
-<p>So, I’ve made a library to resolve that. What it does is hooks up the XML and view model loading process, adding patches from loaded mods, combining everything in the target XML.</p>
+<p>So, I've made a library to resolve that. What it does is hooks up the XML and view model loading process, adding patches from loaded mods, combining everything in the target XML.</p>
 
 <p>Some challenging technical bits:</p>
 <ul>
-  <li>In order to make it future proof, library doesn’t just hook the methods, but changes their code throught IL transpiling</li>
+  <li>In order to make it future proof, library doesn't just hook the methods, but changes their code throught IL transpiling</li>
   <li>In order to combine all of the user view models into one instance (as required by the game UI engine), library creates a dynamic, in memory assemble, with generated IL to call out to user code</li>
 </ul>
 
-<p>I don’t maintain the library anymore, but that was picked up by a team of open source maintainers, and it still being worked on: <a href="https://github.com/BUTR/Bannerlord.UIExtenderEx" target="_blank" rel="noopener noreferrer">UIExtenderEx</a>, and has more than 300,000 downloads on nexusmods.</p>
+<p>I don't maintain the library anymore, but that was picked up by a team of open source maintainers, and it still being worked on: <a href="https://github.com/BUTR/Bannerlord.UIExtenderEx" target="_blank" rel="noopener noreferrer">UIExtenderEx</a>, and has more than 300,000 downloads on nexusmods.</p>
 
           </article>
         </div>
@@ -187,7 +187,7 @@ Bannerlord has a mod loader, which injects dlls into game’s Mono instance. Whi
 
     <!-- Footer -->    <footer class="sticky-bottom mt-5">
       <div class="container">
-        © Copyright 2022 Vasyl  Horbachenko. Powered by <a href="http://jekyllrb.com/" target="_blank" rel="noopener noreferrer">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" target="_blank" rel="noopener noreferrer">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="noopener noreferrer">GitHub Pages</a>.
+        © Copyright 2023 Vasyl  Horbachenko. Powered by <a href="http://jekyllrb.com/" target="_blank" rel="noopener noreferrer">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" target="_blank" rel="noopener noreferrer">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="noopener noreferrer">GitHub Pages</a>.
 
       </div>
     </footer>

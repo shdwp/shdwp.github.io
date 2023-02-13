@@ -158,26 +158,26 @@
     </table>
 </div>
 
-<p>One of the learning projects that I did on Unity. It’s a simulator for the soviet-era SAM system (the one that shoots missiles at planes). In the western world this system is known as a SA-8 Gecko.</p>
+<p>One of the learning projects that I did on Unity. It's a simulator for the soviet-era SAM system (the one that shoots missiles at planes). In the western world this system is known as a SA-8 Gecko.</p>
 
 <p>Osa, as most of the SAM systems, have two radars - searching radar and tracking radar. Searching one is a smaller dish that constantly sweeps the sky looking for potential contacts.
 Tracking radar is the bigger one that locks onto the plane to provide guidance information for the missile.</p>
 
-<p>I went deep into the research of this. While there was a simplistic simulator available where you can push some buttons, I had to dig up the manual (thankfully the system is quite old, and you can find operators manuals online, provided you can read russian) to figure out the proper procedures. I didn’t find much in terms of technical specifications though, most notably the power of the tracking and searching radar (operators manual had some of the specs, like the speed of the sweep of the antenna, its search beam width and vertical volume limitations), so I had to approximate that using the range information that I’ve found online.</p>
+<p>I went deep into the research of this. While there was a simplistic simulator available where you can push some buttons, I had to dig up the manual (thankfully the system is quite old, and you can find operators manuals online, provided you can read russian) to figure out the proper procedures. I didn't find much in terms of technical specifications though, most notably the power of the tracking and searching radar (operators manual had some of the specs, like the speed of the sweep of the antenna, its search beam width and vertical volume limitations), so I had to approximate that using the range information that I've found online.</p>
 
 <p>There is a short video of it:</p>
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/q2nNWoEEIiA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
 
 <hr>
 
-<p>This project took an unorthodox approach to radar simulation. Since there wasn’t much going on in terms of the visuals, I’ve decided to use some of the GPU processing power to make a GPU simulation of the radar instead. Simplistic approach would be to just account for the plane as a dot in the sky, putting the distance and angles into the formula to calculate the radar return. While this would have been sufficient enough, I wanted to go deeper than that. One of the most complex things in radar simulations are the radar cross section calculation. There are formulas for that, but only for simple shapes (that’s why F117 looked as a low poly model - at the time that was the only shape that could have it’s cross section calculated). I had figured that I can also approximate that if I think of radar returns as a rendered images. After all we’ve gotten really good approximating the light travel, so why not use that to approximate similar in nature radar waves?</p>
+<p>This project took an unorthodox approach to radar simulation. Since there wasn't much going on in terms of the visuals, I've decided to use some of the GPU processing power to make a GPU simulation of the radar instead. Simplistic approach would be to just account for the plane as a dot in the sky, putting the distance and angles into the formula to calculate the radar return. While this would have been sufficient enough, I wanted to go deeper than that. One of the most complex things in radar simulations are the radar cross section calculation. There are formulas for that, but only for simple shapes (that's why F117 looked as a low poly model - at the time that was the only shape that could have it's cross section calculated). I had figured that I can also approximate that if I think of radar returns as a rendered images. After all we've gotten really good approximating the light travel, so why not use that to approximate similar in nature radar waves?</p>
 
 <p>Therefore the radar became a camera accompanied by a spotlight. With a custom set of shaders I could render the sky, where planes would be illuminated by the radar. I could also use their normals as a mean to approximate the radar cross section (generally speaking the more direct a plane is to the radar the more visible it is), so that both geometry and size would affect radar returns. The intensity of the spotlight would simulate the power of the radar, with contacts gradually fading out with distance.</p>
 
-<p>While the simulation is generally done by approximation approach (as there is no data available for those radars) it’s still simulating a lot:</p>
+<p>While the simulation is generally done by approximation approach (as there is no data available for those radars) it's still simulating a lot:</p>
 <ul>
   <li>Air molecular dispersion and precipitation dispersion</li>
-  <li>Radar beamshape loses (radar doesn’t emit energy uniformly)</li>
+  <li>Radar beamshape loses (radar doesn't emit energy uniformly)</li>
   <li>System loss (some of the radar energy is lost in the electrical systems)</li>
   <li>Radar cross section based on target model geometry and normal maps</li>
   <li>Occlusion calculations</li>
@@ -208,7 +208,7 @@ Tracking radar is the bigger one that locks onto the plane to provide guidance i
 
     <!-- Footer -->    <footer class="sticky-bottom mt-5">
       <div class="container">
-        © Copyright 2022 Vasyl  Horbachenko. Powered by <a href="http://jekyllrb.com/" target="_blank" rel="noopener noreferrer">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" target="_blank" rel="noopener noreferrer">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="noopener noreferrer">GitHub Pages</a>.
+        © Copyright 2023 Vasyl  Horbachenko. Powered by <a href="http://jekyllrb.com/" target="_blank" rel="noopener noreferrer">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" target="_blank" rel="noopener noreferrer">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="noopener noreferrer">GitHub Pages</a>.
 
       </div>
     </footer>

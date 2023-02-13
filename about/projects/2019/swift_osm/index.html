@@ -158,9 +158,9 @@
     </table>
 </div>
 
-<p>Back when Swift function builders feature was just released in beta, I’ve thought of a DSL request API that can be implemented using it.</p>
+<p>Back when Swift function builders feature was just released in beta, I've thought of a DSL request API that can be implemented using it.</p>
 
-<p>For example, here’s a request that selects roads in the coordinate bounding box:</p>
+<p>For example, here's a request that selects roads in the coordinate bounding box:</p>
 
 <figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">let</span> <span class="nv">request</span> <span class="o">=</span> <span class="kt">OverpassRequest</span> <span class="p">{</span>
     <span class="kt">Union</span> <span class="p">{</span>
@@ -175,7 +175,7 @@
     <span class="kt">Print</span><span class="p">()</span>
 <span class="p">}</span></code></pre></figure>
 
-<p>with it’s counter-example with another library, not using DSL:</p>
+<p>with it's counter-example with another library, not using DSL:</p>
 
 <figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">let</span> <span class="nv">boundingBox</span> <span class="o">=</span> <span class="kt">BoundingBox</span><span class="p">(</span><span class="nv">south</span><span class="p">:</span> <span class="mf">1.5</span><span class="p">,</span> <span class="nv">west</span><span class="p">:</span> <span class="mf">1.75</span><span class="p">,</span> <span class="nv">north</span><span class="p">:</span> <span class="mf">2.5</span><span class="p">,</span> <span class="nv">east</span><span class="p">:</span> <span class="mf">2.75</span><span class="p">)</span>
 <span class="k">let</span> <span class="nv">tags</span><span class="p">:</span> <span class="kt">Set</span><span class="o">&lt;</span><span class="kt">Tag</span><span class="o">&gt;</span> <span class="o">=</span> <span class="p">[</span><span class="o">.</span><span class="nf">hasKey</span><span class="p">(</span><span class="s">"highway"</span><span class="p">)]</span>
@@ -209,7 +209,7 @@
 
     <!-- Footer -->    <footer class="sticky-bottom mt-5">
       <div class="container">
-        © Copyright 2022 Vasyl  Horbachenko. Powered by <a href="http://jekyllrb.com/" target="_blank" rel="noopener noreferrer">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" target="_blank" rel="noopener noreferrer">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="noopener noreferrer">GitHub Pages</a>.
+        © Copyright 2023 Vasyl  Horbachenko. Powered by <a href="http://jekyllrb.com/" target="_blank" rel="noopener noreferrer">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" target="_blank" rel="noopener noreferrer">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="noopener noreferrer">GitHub Pages</a>.
 
       </div>
     </footer>
