@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--
+    If you are serving your web app in a path other than the root, change the
+    href value below to reflect the base path you are serving from.
+
+    The path provided below has to start and end with a slash "/" in order for
+    it to work correctly.
+
+    For more details:
+    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+
+    This is a placeholder for base href that will be replaced by the value of
+    the `--base-href` argument provided to `flutter build`.
+  -->
+  <base href="$FLUTTER_BASE_HREF">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="A new Flutter project.">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="mafia_engine">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png"/>
+
+  <title>mafia_engine</title>
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+  <script>
+    (async () => {
+      if ('serviceWorker' in navigator) {
+        try {
+          const registration = await navigator.serviceWorker.register(
+            new URL('offline_service_worker.js', document.baseURI)
+          );
+          // Wait for the initial app files to be cached before starting Flutter.
+          await Promise.race([
+            new Promise((resolve, reject) => {
+              const worker = registration.installing || registration.waiting || registration.active;
+              if (!worker) return reject(new Error('No offline worker available'));
+              if (worker.state === 'activated') return resolve();
+              worker.addEventListener('statechange', () => {
+                if (worker.state === 'activated') resolve();
+                if (worker.state === 'redundant') reject(new Error('Offline setup failed'));
+              });
+            }),
+            new Promise((_, reject) =>
+              setTimeout(() => reject(new Error('Offline setup timed out')), 15000)
+            ),
+          ]);
+          await navigator.serviceWorker.ready;
+        } catch (error) {
+          console.warn('Offline setup failed:', error);
+        }
+      }
+
+      const bootstrap = document.createElement('script');
+      bootstrap.src = new URL('flutter_bootstrap.js', document.baseURI);
+      document.body.appendChild(bootstrap);
+    })();
+  </script>
+</body>
+</html>
